@@ -1,4 +1,4 @@
-use std::fmt::{Debug, Formatter};
+use std::fmt::Debug;
 use std::process::{ExitCode, Termination};
 
 use crate::example::deep::Panic;
@@ -55,4 +55,10 @@ fn test_make_no_panic() {
     let result = make_no_panic(String::from(""));
     let string = result.unwrap();
     assert_eq!(string.is_empty(), false);
+}
+
+#[test]
+fn test_int() {
+    let sum = 1 + 2;
+    assert_eq!(3, sum);
 }
